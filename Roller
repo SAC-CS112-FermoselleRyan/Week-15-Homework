@@ -1,0 +1,25 @@
+
+public abstract class Roller implements Runnable {
+
+	private final Array sharedArray;
+	private final int startValue;
+
+	public Roller( int value, Array array )
+	{
+		startValue = value;
+		sharedArray = array;
+		} 
+	
+	public void run()
+	{
+		for ( int i = startValue; i < startValue + 3; i++ )
+		{
+			sharedArray.add( i ); 
+
+		}
+
+	}
+	
+	
+	
+}
